@@ -1,0 +1,27 @@
+{
+  "name": "chaibackend",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "javascript",
+    "Backend",
+    "chai"
+  ],
+  "license": "ISC",
+  "author": "Raj gupta",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+  },
+  "devDependencies": {
+    "nodeman": "^1.1.2",
+    "prettier": "^3.9.6"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.10.0",
+    "nodemon": "^3.1.14"
+  }
+}
