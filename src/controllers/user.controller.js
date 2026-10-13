@@ -23,8 +23,6 @@ const generateAccessAndRefereshTokens = async(userId) =>{
     }
 }
 
-
-
 const registerUser = asyncHandler(async(req,res)=>{
   //get user details from frontend
   //validation - not empty 
@@ -149,9 +147,10 @@ const loginUser = asyncHandler(async (req, res) =>{
 
 const logoutUser = asyncHandler(async(req,res)=>{
     await User.findByIdAndUpdate(
-        req.user._id,{
-            $set:{
-                refreshToken:undefined
+        req.user._id,
+        {
+            $unset:{
+                refreshToken: 1 //this remove the field from document
             }
         },
         {
